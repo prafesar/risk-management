@@ -53,5 +53,13 @@
   // automatization
   "task.allowAutomaticTasks": "on",
   "json.schemas": [],
-  "cSpell.words": []
+  "cSpell.words": [],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "risk-management",
+      "database": "db.sqlite"
+    }
+  ]
 }
