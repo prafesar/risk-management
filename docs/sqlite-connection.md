@@ -37,3 +37,4 @@ sqltools extension setting
   ]
 ```
 
+tutorial: https://community.sap.com/t5/technology-blogs-by-sap/deploying-cap-services-with-the-in-memory-sqlite-database/ba-p/13508405
