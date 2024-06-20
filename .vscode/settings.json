@@ -1,9 +1,57 @@
 {
-    "files.exclude": {
-      "**/.github": true,
-      "**/.reuse": true,
-      "**/.vscode": true,
-      "LICENSES": true
-    }
-  }
-  
+  "files.exclude": {
+    "**/.github": true,
+    "**/.reuse": true,
+    "LICENSES": true
+  },
+
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // view
+  "editor.fontSize": 15,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Solarized Light",
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.foldingImportsByDefault": true,
+  "editor.bracketPairColorization.enabled": true,
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+
+  // edit
+  "editor.inlineSuggest.enabled": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // format
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "prettier.configPath": ".prettierrc",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+
+  // inline hints
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": false,
+
+  // spell checker
+  "cSpell.language": "en,ru",
+  "cSpell.userWords": ["prafesar"],
+  "cSpell.enableFiletypes": ["!latex"],
+
+  // eslint
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // automatization
+  "task.allowAutomaticTasks": "on",
+  "json.schemas": [],
+  "cSpell.words": []
+}
