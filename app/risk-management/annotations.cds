@@ -43,23 +43,23 @@ annotate service.Risks with @(
     UI.Facets : [
         {
             $Type : 'UI.CollectionFacet',
-            Label : 'Risk Overview',
+            Label : '{i18n>RiskOverview}',
             ID : 'RiskOverview',
             Facets : [
                 {
                     $Type : 'UI.ReferenceFacet',
-                    Label : 'Risk Details',
+                    Label : '{i18n>RiskDetails}',
                     ID : 'RiskDetails',
                     Target : '@UI.FieldGroup#RiskDetails',
                 },
                 {
                     $Type : 'UI.CollectionFacet',
-                    Label : 'Mitigation',
+                    Label : '{i18n>Mitigation}',
                     ID : 'Mitigation',
                     Facets : [
                         {
                             $Type : 'UI.ReferenceFacet',
-                            Label : 'Mitigation Details',
+                            Label : '{i18n>MitigationDetails}',
                             ID : 'MitigationDetails',
                             Target : '@UI.FieldGroup#MitigationDetails',
                         },],
@@ -80,11 +80,13 @@ annotate service.Risks with @(
             $Type : 'UI.DataField',
             Label : '{i18n>Priority}',
             Value : prio_code,
+            Criticality : PrioCriticality,
         },
         {
             $Type : 'UI.DataField',
             Label : '{i18n>Impact}',
             Value : impact,
+            Criticality : criticality,
         },
         {
             $Type : 'UI.DataField',
@@ -117,7 +119,7 @@ annotate service.Risks with {
                 ValueListProperty : 'timeline',
             },
         ],
-        Label : 'Mitigation',
+        Label : '{i18n>Mitigation}',
     }
 };
 
@@ -150,6 +152,7 @@ annotate service.Risks with @(
             {
                 $Type : 'UI.DataField',
                 Value : prio_code,
+                Label : '{i18n>Priority}',
             },{
                 $Type : 'UI.DataField',
                 Value : impact,
@@ -193,4 +196,10 @@ annotate service.Risks with {
 };
 annotate service.Mitigations with {
     ID @Common.Text : descr
+};
+annotate service.Risks with {
+    prio @Common.Text : {
+            $value : prio.descr,
+            ![@UI.TextArrangement] : #TextOnly,
+        }
 };
