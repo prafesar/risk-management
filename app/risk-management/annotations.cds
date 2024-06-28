@@ -80,11 +80,13 @@ annotate service.Risks with @(
             $Type : 'UI.DataField',
             Label : '{i18n>Priority}',
             Value : prio_code,
+            Criticality : PrioCriticality,
         },
         {
             $Type : 'UI.DataField',
             Label : '{i18n>Impact}',
             Value : impact,
+            Criticality : criticality,
         },
         {
             $Type : 'UI.DataField',
@@ -193,4 +195,10 @@ annotate service.Risks with {
 };
 annotate service.Mitigations with {
     ID @Common.Text : descr
+};
+annotate service.Risks with {
+    prio @Common.Text : {
+            $value : prio.descr,
+            ![@UI.TextArrangement] : #TextOnly,
+        }
 };
