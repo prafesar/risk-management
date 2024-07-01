@@ -8,7 +8,7 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   // view
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "window.zoomLevel": 1,
   "workbench.colorTheme": "Solarized Light",
   "editor.stickyScroll.enabled": true,
@@ -32,10 +32,10 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 
   // inline hints
-  "javascript.inlayHints.enumMemberValues.enabled": true,
-  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
   "javascript.inlayHints.parameterNames.enabled": "literals",
-  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": false,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": false,
 
