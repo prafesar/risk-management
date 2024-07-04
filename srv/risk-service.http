@@ -1,3 +1,13 @@
-# Get list of items
-GET http://localhost:4004/odata/v4/service/risk/Items HTTP/1.1
+@host = https://port4004-workspaces-ws-mj5dl.us10.trial.applicationstudio.cloud.sap
+
+### Get list of items
+GET {{host}}/odata/v4/service/risks/Items HTTP/1.1
+Content-Type: application/json
+
+### Get list of Risks with business partners
+GET {{host}}/odata/v4/service/risks?$expand=bp HTTP/1.1
+Content-Type: application/json
+
+### Get list of risks
+GET {{host}}/odata/v4/service/risks HTTP/1.1
 Content-Type: application/json

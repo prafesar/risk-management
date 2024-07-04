@@ -9,7 +9,6 @@
 
   // view
   "editor.fontSize": 14,
-  "window.zoomLevel": 1,
   "workbench.colorTheme": "Solarized Light",
   "editor.stickyScroll.enabled": true,
   "editor.minimap.enabled": false,
