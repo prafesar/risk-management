@@ -37,8 +37,28 @@ module.exports = cds.service.impl(async function () {
         });
     });
 
-    this.on('addItem', ({ data: { title, descr, quantity } }) => {
-        console.log(data);
+    this.on('addItem', async (req) => {
+        const { ID, title, descr, quantity } = req.data;
+
+        await cds.db.run(
+            INSERT.into(Items).entries({
+                ID,
+                title,
+                descr,
+                quantity,
+            }),
+        );
+    });
+
+    this.before('addItem', async (req) => {
+        const { quantity } = req.data;
+        if (quantity > 100) {
+            req.error(400, 'Quantity exceeds 100');
+        }
+    });
+
+    this.on('getItem', async (req) => {
+        return cds.db.run(SELECT('*').from(Items).where({ quantity: req.data.quantity }));
     });
 
     // connect to remote service

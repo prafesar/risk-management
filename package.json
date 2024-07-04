@@ -20,6 +20,9 @@
     "start": "cds-serve"
   },
   "cds": {
+    "i18n": {
+      "default_language": "de"
+    },
     "requires": {
       "API_BUSINESS_PARTNER": {
         "kind": "odata",
