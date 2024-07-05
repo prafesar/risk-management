@@ -1,4 +1,3 @@
-
 namespace riskmanagement;
 
 using {
@@ -36,12 +35,8 @@ entity Priority : CodeList {
             };
 }
 
-entity Items : cuid {
-        title                    : String(100);
-        descr                    : String;
-        quantity                 : Integer; 
-}
 
+// using an external service from SAP S/4HANA Cloud
 using { API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
 
 

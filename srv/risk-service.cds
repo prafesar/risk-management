@@ -1,4 +1,3 @@
-
 using {riskmanagement as rm} from '../db/schema';
 
 @path: 'service/risk'
@@ -9,11 +8,6 @@ service RiskService {
     entity Mitigations as projection on rm.Mitigations;
     annotate Mitigations with @odata.draft.enabled;
 
-    entity Items as projection on rm.Items;
-    annotate Items with @odata.draft.enabled;
-
-    action addItem (title:String,descr:String,quantity:Integer);
-    function getItem (quantity:Integer) returns many Items;
-    
+    // BusinessPartner
     @readonly entity BusinessPartners as projection on rm.BusinessPartners;
 }
