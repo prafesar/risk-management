@@ -32,7 +32,6 @@
     }
   },
   "sapux": [
-    "app/risk-management",
     "app/risk-management"
   ]
 }
