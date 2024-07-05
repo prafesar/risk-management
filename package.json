@@ -29,6 +29,15 @@
           "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
         }
       }
+    },
+    "i18n": {
+      "default_language": "de"
+    },
+    "db": {
+      "kind": "sqlite",
+      "credentials": {
+        "url": "db.sqlite"
+      }
     }
   },
   "sapux": [
