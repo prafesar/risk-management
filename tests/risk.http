@@ -8,3 +8,7 @@ Content-Type: application/json
 ### Northwind
 GET {{host}}odata/v4/service/risk/getNorthwind()
 Content-Type: application/json
+
+### LocalServer
+GET {{host}}odata/v4/service/risk/getMyData()
+Content-Type: application/json

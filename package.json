@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "start:hybrid": "cds watch --profile hybrid",
+    "hybrid": "cds watch --profile hybrid",
+    "reload": "curl localhost:8887/reload",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
@@ -36,7 +37,7 @@
           "destination": "Northwind"
         }
       },
-      "MY_SERVER": {
+      "MyLocalServer": {
         "kind": "odata",
         "creadeantials": {
           "destination": "MyLocalServer"
