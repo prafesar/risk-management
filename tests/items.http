@@ -1,0 +1,25 @@
+@host=http://localhost:4004
+
+### CREATE new item
+POST  {{host}}/odata/v4/service/risk/addItem
+Content-Type: application/json
+
+{
+"title":"item1",
+"descr":"descr1",
+"quantity": 1
+}
+
+### Invalid params
+POST  {{host}}/odata/v4/service/risk/addItem
+Content-Type: application/json
+
+{
+"title":"item2",
+"descr":"descr2",
+"quantity": 111
+}
+
+### GET new item
+GET {{host}}/odata/v4/service/risk/getItem(quantity=1)
+Content-Type: application/json

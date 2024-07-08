@@ -17,6 +17,7 @@
   },
   "scripts": {
     "start": "cds-serve",
+    "start:hybrid": "cds watch --profile hybrid",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
@@ -27,6 +28,19 @@
         "credentials": {
           "destination": "BusinessPartnerDestination",
           "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
+        }
+      },
+      "northwind": {
+        "kind": "odata",
+        "model": "srv/external/API_NORTH_WIND",
+        "credentials": {
+          "destination": "Northwind"
+        }
+      },
+      "MY_SERVER": {
+        "kind": "odata",
+        "creadeantials": {
+          "destination": "MyLocalServer"
         }
       }
     },

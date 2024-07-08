@@ -1,0 +1,12 @@
+{
+  "destinations": [
+    {
+      "name": "MyLocalServer",
+      "url": "http://localhost:8000"
+    },
+    {
+      "name": "Northwind",
+      "url": "https://service.odata.org/northwind/northwind.svc"
+    }
+  ]
+}

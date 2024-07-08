@@ -37,10 +37,21 @@ entity Priority : CodeList {
 
 
 // using an external service from SAP S/4HANA Cloud
-using { API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
+using { API_BUSINESS_PARTNER as partners } from '../srv/external/API_BUSINESS_PARTNER.csn';
 
 
-entity BusinessPartners as projection on external.A_BusinessPartner {
+entity BusinessPartners as projection on partners.A_BusinessPartner {
    key BusinessPartner,
    BusinessPartnerFullName as FullName,
+}
+
+entity Items:cuid  {
+        title                    : String(100);
+        descr                    : String;      
+        quantity                 : Integer
+}
+
+
+entity DataFromMyServer {
+  Name: String
 }

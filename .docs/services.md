@@ -1,0 +1,1 @@
+`cdsc convert-edmx <input-edmx-file> -o <output-csn-file>`
