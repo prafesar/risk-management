@@ -1,6 +1,0 @@
-@host=http://localhost:80
-
-### Northwind
-GET {{host}}odata/v4/service/northwind/getNorthwind()
-Content-Type: application/json
-

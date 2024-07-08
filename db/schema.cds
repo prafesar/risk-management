@@ -50,8 +50,3 @@ entity Items:cuid  {
         descr                    : String;      
         quantity                 : Integer
 }
-
-
-entity DataFromMyServer {
-  Name: String
-}

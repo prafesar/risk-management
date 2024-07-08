@@ -17,5 +17,6 @@ service RiskService {
     action addItem (title:String, descr:String, quantity:Integer);
     function getItem (quantity:Integer) returns many Items;
 
+    function getMyData() returns Array of String;
     function getNorthwind() returns Array of String;
 }

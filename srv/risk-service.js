@@ -112,35 +112,45 @@ module.exports = cds.service.impl(async function () {
     return risks;
   });
 
-      this.on("addItem", async (req) => {
-        const { ID, title, descr, quantity } = req.data;
+  this.on("addItem", async (req) => {
+    const { ID, title, descr, quantity } = req.data;
 
-        await cds.db.run(
-          INSERT.into(Items).entries({
-            ID,
-            title,
-            descr,
-            quantity,
-          })
-        );
-      });
-      
-      this.before("addItem", async (req) => {
-        const { quantity } = req.data;
-        if (quantity > 100) {
-          req.error(400, "Quantity exceeds 100");
-        }
-      });
+    await cds.db.run(
+      INSERT.into(Items).entries({
+        ID,
+        title,
+        descr,
+        quantity,
+      })
+    );
+  });
 
-      this.on("getItem", async (req) => {
-        return cds.db.run(
-          SELECT("*").from(Items).where({ quantity: req.data.quantity })
-        );
-      });
+  this.before("addItem", async (req) => {
+    const { quantity } = req.data;
+    if (quantity > 100) {
+      req.error(400, "Quantity exceeds 100");
+    }
+  });
 
-  // connect to remote service
-  //   const mySrv = await cds.connect.to("MY_SERVER");
-  //   this.on("RREAD", DataFromMyServer, async (req, next) => {
+  this.on("getItem", async (req) => {
+    return cds.db.run(
+      SELECT("*").from(Items).where({ quantity: req.data.quantity })
+    );
+  });
 
-  //   });
+  const northwind = await cds.connect.to("Northwind");
+
+  this.on("getNorthwind", async (req) => {
+    const result = await northwind.get("/Products");
+    console.log(result);
+    return result;
+  });
+
+  // const myLocal = await cds.connect.to("MY_SERVER");
+
+  // this.on("getMyData", async (req) => {
+  //   const result = await myLocal.get("/");
+  //   console.log(result);
+  //   return result;
+  // });
 });
