@@ -1,1 +1,1 @@
-SELECT * FROM riskmanagement_Mitigations;
+SELECT * FROM riskmanagement_Risks;

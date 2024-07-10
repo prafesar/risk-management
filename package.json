@@ -16,9 +16,10 @@
     "@sap/ux-specification": "^1.120.13"
   },
   "scripts": {
-    "start": "cds-serve",
-    "hybrid": "cds watch --profile hybrid",
+    "start:dev": "cds-serve",
+    "start": "cds watch --profile hybrid",
     "reload": "curl localhost:8887/reload",
+    "find": "lsof -i :4004",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
@@ -35,6 +36,29 @@
         "kind": "odata",
         "credentials": {
           "destination": "Northwind"
+        }
+      },
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "riskviewer": {
+            "password": "initial",
+            "attr": {
+              "email": "risk.viewer@tester.sap.com"
+            },
+            "roles": [
+              "RiskViewer"
+            ]
+          },
+          "riskmanager": {
+            "password": "initial",
+            "attr": {
+              "email": "risk.manager@tester.sap.com"
+            },
+            "roles": [
+              "RiskManager"
+            ]
+          }
         }
       },
       "MyLocalServer": {
