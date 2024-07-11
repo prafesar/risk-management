@@ -14,7 +14,7 @@
     "passport": "^0.7.0"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1",
+    "@cap-js/sqlite": "^1.7.3",
     "@sap/cds-dk": "^7.9.4",
     "@sap/ux-specification": "^1.120.13"
   },
@@ -23,8 +23,10 @@
     "start": "cds watch --profile hybrid",
     "reload": "curl localhost:8887/reload",
     "find": "lsof -i :4004",
+    "freeze": "npm update --package-lock-only",
     "build": "cds build --production",
-    "build:mtb": "mbt build -t gen --mtar mta.tar",
+    "build:mbt": "mbt build -t gen --mtar mta.tar",
+    "deploy": "cf deploy gen/mta.tar",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
