@@ -23,6 +23,8 @@
     "start": "cds watch --profile hybrid",
     "reload": "curl localhost:8887/reload",
     "find": "lsof -i :4004",
+    "build": "cds build --production",
+    "build:mtb": "mbt build -t gen --mtar mta.tar",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
