@@ -8,6 +8,7 @@
   "dependencies": {
     "@sap-cloud-sdk/http-client": "3.6.0",
     "@sap/cds": "^7",
+    "@sap/cds-hana": "^2.0.0",
     "express": "^4",
     "passport": "^0.7.0"
   },
@@ -24,6 +25,9 @@
   },
   "cds": {
     "requires": {
+      "multitenancy": true,
+      "extensibility": true,
+      "toggles": true,
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
         "model": "srv/external/API_BUSINESS_PARTNER",
@@ -66,6 +70,9 @@
         "creadeantials": {
           "destination": "MyLocalServer"
         }
+      },
+      "[production]": {
+        "db": "hana"
       }
     },
     "i18n": {
