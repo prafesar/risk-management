@@ -1,5 +1,25 @@
 {
   "welcomeFile": "app/launchpad.html",
+  "authenticationMethod": "none",
+  "auth": {
+    "kind": "mocked",
+    "users": {
+      "riskviewer": {
+        "password": "initial",
+        "attr": {
+          "email": "risk.viewer@tester.sap.com"
+        },
+        "roles": ["RiskViewer"]
+      },
+      "riskmanager": {
+        "password": "initial",
+        "attr": {
+          "email": "risk.manager@tester.sap.com"
+        },
+        "roles": ["RiskManager"]
+      }
+    }
+  },
   "routes": [
     {
       "source": "^/app/(.*)$",

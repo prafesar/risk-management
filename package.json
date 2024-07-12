@@ -19,8 +19,8 @@
     "@sap/ux-specification": "^1.120.13"
   },
   "scripts": {
-    "start:dev": "cds-serve",
-    "start": "cds watch --profile hybrid",
+    "start": "cds-serve",
+    "start:h": "cds watch --profile hybrid",
     "reload": "curl localhost:8887/reload",
     "find": "lsof -i :4004",
     "freeze": "npm update --package-lock-only",
@@ -79,7 +79,29 @@
       },
       "[production]": {
         "db": "hana",
-        "auth": "xsuaa"
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "riskviewer": {
+              "password": "initial",
+              "attr": {
+                "email": "risk.viewer@tester.sap.com"
+              },
+              "roles": [
+                "RiskViewer"
+              ]
+            },
+            "riskmanager": {
+              "password": "initial",
+              "attr": {
+                "email": "risk.manager@tester.sap.com"
+              },
+              "roles": [
+                "RiskManager"
+              ]
+            }
+          }
+        }
       }
     },
     "i18n": {
