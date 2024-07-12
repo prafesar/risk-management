@@ -54,10 +54,19 @@
       "[production]": {
         "db": "hana",
         "auth": "xsuaa"
+      },
+      "[hybrid]": {
+        "auth": "xsuaa"
       }
     },
     "i18n": {
       "default_language": "de"
+    },
+    "db": {
+      "kind": "sqlite",
+      "credentials": {
+        "url": "db.sqlite"
+      }
     }
   },
   "sapux": [
