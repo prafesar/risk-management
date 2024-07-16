@@ -7,18 +7,26 @@
   "repository": "https://github.com/SAP-samples/sap-learning-extension-suite",
   "dependencies": {
     "@sap-cloud-sdk/http-client": "3.6.0",
-    "@sap/cds": "^7",
+    "@sap/cds": "7.2.0",
+    "@sap/cds-dk": "7.6.0",
     "express": "^4",
-    "passport": "^0.7.0"
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "^1.120.13"
+    "@sap/ux-specification": "^1.108.14"
   },
   "scripts": {
     "start": "cds-serve",
-    "hybrid": "cds watch --profile hybrid",
+    "start:h": "cds watch --profile hybrid",
     "reload": "curl localhost:8887/reload",
+    "find": "lsof -i :4004",
+    "freeze": "npm update --package-lock-only",
+    "build": "cds build --production",
+    "build:mbt": "mbt build -t gen --mtar mta.tar",
+    "deploy": "cf deploy gen/mta.tar",
     "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
@@ -42,6 +50,13 @@
         "creadeantials": {
           "destination": "MyLocalServer"
         }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "[hybrid]": {
+        "auth": "xsuaa"
       }
     },
     "i18n": {
