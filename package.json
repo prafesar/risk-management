@@ -60,7 +60,7 @@
       }
     },
     "i18n": {
-      "default_language": "de"
+      "default_language": "en"
     },
     "db": {
       "kind": "sqlite",
