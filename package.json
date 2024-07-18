@@ -59,9 +59,6 @@
         "auth": "xsuaa"
       }
     },
-    "i18n": {
-      "default_language": "en"
-    },
     "db": {
       "kind": "sqlite",
       "credentials": {
