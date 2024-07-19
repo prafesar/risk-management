@@ -21,6 +21,7 @@
   "scripts": {
     "start": "cds-serve",
     "start:h": "cds watch --profile hybrid",
+    "start:router": "cds bind --exec -- npm start --prefix app",
     "reload": "curl localhost:8887/reload",
     "find": "lsof -i :4004",
     "freeze": "npm update --package-lock-only",
@@ -55,9 +56,7 @@
         "db": "hana",
         "auth": "xsuaa"
       },
-      "[hybrid]": {
-        "auth": "xsuaa"
-      }
+      "auth": "dummy"
     },
     "db": {
       "kind": "sqlite",
