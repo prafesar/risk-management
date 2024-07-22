@@ -148,11 +148,11 @@ module.exports = cds.service.impl(async function () {
     return result;
   });
 
-  // const myLocal = await cds.connect.to("MyLocalServer");
+  const myLocal = await cds.connect.to("MyLocalServer");
 
-  // this.on("getMyData", async (req) => {
-  //   const result = await myLocal.get("/");
-  //   console.log(result);
-  //   return result;
-  // });
+  this.on("getMyData", async (req) => {
+    const result = await myLocal.get("/");
+    console.log(result);
+    return result;
+  });
 });
