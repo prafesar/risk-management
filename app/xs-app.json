@@ -1,8 +1,8 @@
 {
-  "welcomeFile": "app/risk-management/webapp/index.html",
+  "welcomeFile": "/app/risk-management/webapp/index.html",
   "logout": {
     "logoutEndpoint": "/app-logout",
-    "logoutPage": "/"
+    "logoutPage": "/app/risk-management/webapp/index.html"
   },
   "routes": [
     {

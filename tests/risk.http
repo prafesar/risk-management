@@ -6,9 +6,9 @@ GET {{host}}/odata/v4/service/risk/Risks HTTP/1.1
 Content-Type: application/json
 
 ### Northwind
-GET {{host}}odata/v4/service/risk/getNorthwind()
+GET {{host}}/odata/v4/service/risk/getNorthwind()
 Content-Type: application/json
 
 ### LocalServer
-GET {{host}}odata/v4/service/risk/getMyData()
+GET {{host}}/odata/v4/service/risk/getMyData()
 Content-Type: application/json
