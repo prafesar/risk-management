@@ -48,7 +48,7 @@
       },
       "MyLocalServer": {
         "kind": "odata",
-        "creadeantials": {
+        "credentials": {
           "destination": "MyLocalServer"
         }
       },
