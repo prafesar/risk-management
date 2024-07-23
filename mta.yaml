@@ -26,6 +26,7 @@ modules:
       - name: risk-management-auth
       - name: risk-management-db
       - name: risk-management-destination
+      - name: risk-management-connectivity
 
   - name: risk-management-db-deployer
     type: hdb
@@ -50,6 +51,7 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: risk-management-auth
+      - name: risk-management-connectivity
 
 resources:
   - name: risk-management-auth
@@ -84,4 +86,9 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
+      service-plan: lite
+  - name: risk-management-connectivity
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: connectivity
       service-plan: lite
